@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | Корпусная мебель на заказ</title>
+    <meta name="description" content="Адрес, телефон и мессенджеры студии корпусной мебели в Grafing bei München.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ================= ШАПКА ================= -->
+    <header class="site-header">
+        <div class="site-header__inner">
+            <button class="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+            <nav class="nav">
+                <a href="projects.html">Проекты</a>
+                <a href="about.html">О студии</a>
+                <a href="services.html">Услуги</a>
+                <a href="process.html">Процесс работы</a>
+                <a href="contacts.html">Контакты</a>
+            </nav>
+            <div class="header-icons">
+                <a href="#" aria-label="Поиск"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></a>
+                <a href="#" aria-label="Профиль"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></a>
+                <a href="#" aria-label="Избранное"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></a>
+                <a href="#" aria-label="Корзина"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 8h14l-1 12H6L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="cart-badge">2</span></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page" style="background: var(--dark);">
+
+        <!-- Контакты (тёмная версия по макету) -->
+        <section class="section section--dark contacts-dark">
+            <div class="container">
+                <div class="contacts-dark__head">
+                    <div>
+                        <div class="breadcrumbs" style="margin-bottom: 30px;"><a href="index.html">Главная</a> / Контакты</div>
+                        <span class="eyebrow">Контакты</span>
+                        <h1 class="title" style="margin-bottom:0;">Контакты и наш адрес</h1>
+                    </div>
+                    <a href="#" class="btn" data-modal-open>Получить консультацию</a>
+                </div>
+
+                <div class="contacts-dark__grid">
+                    <div>
+                        <div class="contact-item">
+                            <div class="contact-item__label">Адрес и локация</div>
+                            <div class="contact-item__value">Marktplatz 12, 85560 Grafing bei München</div>
+                            <div class="contact-item__sub">Бавария, Германия (Grafing)</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item__label">Телефон</div>
+                            <a href="tel:+498092854012" class="contact-item__value">+49 (8092) 854-00-12</a>
+                            <div class="contact-item__sub">Пн — Пт: 09:00 - 18:00</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item__label">Электронная почта</div>
+                            <a href="mailto:info@mebel-grafing.de" class="contact-item__value">info@mebel-grafing.de</a>
+                        </div>
+                    </div>
+
+                    <div class="dark-card">
+                        <h3>Мессенджеры и социальные сети</h3>
+                        <p>Свяжитесь с нами удобным способом для быстрого расчёта проекта.</p>
+                        <div class="socials">
+                            <a href="#" class="social-btn">Telegram</a>
+                            <a href="#" class="social-btn">WhatsApp</a>
+                            <a href="#" class="social-btn">Instagram</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contacts-dark__grid">
+                    <div class="map">
+                        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=11.9580%2C48.0410%2C11.9800%2C48.0500&amp;layer=mapnik&amp;marker=48.0456%2C11.9690" title="Карта: Grafing bei München" loading="lazy"></iframe>
+                    </div>
+
+                    <div class="dark-card">
+                        <h3>Напишите нам</h3>
+                        <p>Опишите задачу — подготовим предварительный расчёт.</p>
+                        <form class="form">
+                            <input type="text" name="name" placeholder="Ваше имя" required>
+                            <input type="tel" name="phone" placeholder="Телефон" required>
+                            <select name="category">
+                                <option value="">Что нужно изготовить?</option>
+                                <option>Кухня</option>
+                                <option>Шкаф / гардеробная</option>
+                                <option>Мебель для дома</option>
+                                <option>Мебель для бизнеса</option>
+                            </select>
+                            <textarea name="message" placeholder="Комментарий"></textarea>
+                            <button type="submit" class="btn">Отправить заявку</button>
+                            <div class="form__success">Спасибо! Мы скоро свяжемся с вами.</div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= ПОДВАЛ ================= -->
+    <footer class="site-footer">
+        <div class="container">
+            <nav class="site-footer__nav">
+                <a href="index.html">Главная</a>
+                <a href="projects.html">Проекты</a>
+                <a href="about.html">О студии</a>
+                <a href="services.html">Услуги</a>
+                <a href="process.html">Процесс работы</a>
+                <a href="contacts.html">Контакты</a>
+            </nav>
+            <div class="site-footer__bottom">
+                <span>© <span data-year></span> Студия Корпусной Мебели. Все права защищены.</span>
+                <span>Индивидуальность • Точность • Качество</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================= МОДАЛЬНОЕ ОКНО ================= -->
+    <div class="modal" id="modal">
+        <div class="modal__box">
+            <button class="modal__close" aria-label="Закрыть">&times;</button>
+            <h2>Получить консультацию</h2>
+            <p>Оставьте контакты — перезвоним в течение 15 минут.</p>
+            <form class="form">
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="tel" name="phone" placeholder="Телефон" required>
+                <textarea name="message" placeholder="Что хотите заказать?"></textarea>
+                <button type="submit" class="btn">Отправить заявку</button>
+                <div class="form__success">Спасибо! Мы скоро свяжемся с вами.</div>
+                <div class="form__agree">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

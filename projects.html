@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проекты | Корпусная мебель на заказ</title>
+    <meta name="description" content="Портфолио: кухни, шкафы и гардеробные, мебель для дома и бизнеса.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ================= ШАПКА ================= -->
+    <header class="site-header">
+        <div class="site-header__inner">
+            <button class="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+            <nav class="nav">
+                <a href="projects.html">Проекты</a>
+                <a href="about.html">О студии</a>
+                <a href="services.html">Услуги</a>
+                <a href="process.html">Процесс работы</a>
+                <a href="contacts.html">Контакты</a>
+            </nav>
+            <div class="header-icons">
+                <a href="#" aria-label="Поиск"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></a>
+                <a href="#" aria-label="Профиль"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></a>
+                <a href="#" aria-label="Избранное"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></a>
+                <a href="#" aria-label="Корзина"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 8h14l-1 12H6L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="cart-badge">2</span></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+        <div class="page__inner">
+
+            <!-- Шапка страницы -->
+            <section class="page-hero" style="background-image: url('images/cat-kitchens.jpg');">
+                <div class="breadcrumbs"><a href="index.html">Главная</a> / Проекты</div>
+                <br>
+                <h1 class="title">Наши проекты</h1>
+                <p class="lead" style="color:#ddd;">Реализованные работы: кухни, гардеробные, мебель для дома и офиса.</p>
+            </section>
+
+            <!-- Галерея проектов -->
+            <section class="section">
+                <div class="container">
+                    <div class="filters">
+                        <button class="filter-btn is-active" data-filter="all">Все</button>
+                        <button class="filter-btn" data-filter="kitchens">Кухни</button>
+                        <button class="filter-btn" data-filter="wardrobes">Шкафы и гардеробные</button>
+                        <button class="filter-btn" data-filter="home">Мебель для дома</button>
+                        <button class="filter-btn" data-filter="business">Мебель для бизнеса</button>
+                    </div>
+
+                    <!-- Чтобы добавить проект: скопируйте блок <article class="project">,
+                         положите фото в папку images и укажите категорию в data-category -->
+                    <div class="projects-grid">
+                        <article class="project" data-category="kitchens">
+                            <img src="images/kitchen-premium.jpg" alt="Кухня с островом из камня">
+                            <div class="project__caption">
+                                <div class="project__tag">Кухни</div>
+                                <h3>Кухня с каменным островом</h3>
+                            </div>
+                        </article>
+                        <article class="project" data-category="kitchens">
+                            <img src="images/cat-kitchens.jpg" alt="Оливковая кухня">
+                            <div class="project__caption">
+                                <div class="project__tag">Кухни</div>
+                                <h3>Оливковая кухня с мрамором</h3>
+                            </div>
+                        </article>
+                        <article class="project" data-category="wardrobes">
+                            <img src="images/wardrobe-premium.jpg" alt="Гардеробная со стеклянными фасадами">
+                            <div class="project__caption">
+                                <div class="project__tag">Шкафы и гардеробные</div>
+                                <h3>Гардеробная со стеклом</h3>
+                            </div>
+                        </article>
+                        <article class="project" data-category="wardrobes">
+                            <img src="images/cat-wardrobes.jpg" alt="Шкаф с рабочим местом">
+                            <div class="project__caption">
+                                <div class="project__tag">Шкафы и гардеробные</div>
+                                <h3>Шкаф с рабочей зоной</h3>
+                            </div>
+                        </article>
+                        <article class="project" data-category="home">
+                            <img src="images/cat-home.jpg" alt="ТВ-зона в гостиной">
+                            <div class="project__caption">
+                                <div class="project__tag">Мебель для дома</div>
+                                <h3>ТВ-зона в гостиной</h3>
+                            </div>
+                        </article>
+                        <article class="project" data-category="home">
+                            <img src="images/catalog-thumb.jpg" alt="Кухня-гостиная">
+                            <div class="project__caption">
+                                <div class="project__tag">Мебель для дома</div>
+                                <h3>Кухня-гостиная</h3>
+                            </div>
+                        </article>
+                        <article class="project" data-category="business">
+                            <img src="images/cat-business.jpg" alt="Кабинет руководителя">
+                            <div class="project__caption">
+                                <div class="project__tag">Мебель для бизнеса</div>
+                                <h3>Кабинет руководителя</h3>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section--light" style="border-radius: 32px;">
+                <div class="container">
+                    <div class="info-bar" style="background:#fff;">
+                        <span>Хотите такой же проект? Рассчитаем стоимость бесплатно</span>
+                        <a href="#" class="btn" data-modal-open>Получить консультацию ↗</a>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- ================= ПОДВАЛ ================= -->
+    <footer class="site-footer">
+        <div class="container">
+            <nav class="site-footer__nav">
+                <a href="index.html">Главная</a>
+                <a href="projects.html">Проекты</a>
+                <a href="about.html">О студии</a>
+                <a href="services.html">Услуги</a>
+                <a href="process.html">Процесс работы</a>
+                <a href="contacts.html">Контакты</a>
+            </nav>
+            <div class="site-footer__bottom">
+                <span>© <span data-year></span> Студия Корпусной Мебели. Все права защищены.</span>
+                <span>Индивидуальность • Точность • Качество</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================= МОДАЛЬНОЕ ОКНО ================= -->
+    <div class="modal" id="modal">
+        <div class="modal__box">
+            <button class="modal__close" aria-label="Закрыть">&times;</button>
+            <h2>Получить консультацию</h2>
+            <p>Оставьте контакты — перезвоним в течение 15 минут.</p>
+            <form class="form">
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="tel" name="phone" placeholder="Телефон" required>
+                <textarea name="message" placeholder="Что хотите заказать?"></textarea>
+                <button type="submit" class="btn">Отправить заявку</button>
+                <div class="form__success">Спасибо! Мы скоро свяжемся с вами.</div>
+                <div class="form__agree">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
