@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>О студии | Корпусная мебель на заказ</title>
-    <meta name="description" content="О студии корпусной мебели: лазерный замер, 3D-проектирование, собственный цех и гарантии.">
+    <title data-i18n="meta.about.title">Über uns | K&amp;B Design Group</title>
+    <meta name="description" content="Über das Studio: Laser-Aufmaß, 3D-Planung, eigene Werkstatt und Garantien." data-i18n-content="meta.about.desc">
+    <link rel="icon" type="image/png" href="images/logo/favicon.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,21 +14,40 @@
 </head>
 <body>
 
+    <!-- ================= ШАПКА ================= -->
     <header class="site-header">
         <div class="site-header__inner">
-            <button class="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+            <button class="burger" aria-label="Menü" data-i18n-aria="aria.menu"><span></span><span></span><span></span></button>
+
+            <a href="index.html" class="header-logo" aria-label="Zur Startseite" data-i18n-aria="aria.homeLogo">
+                <img class="header-logo__emblem" src="images/logo/logo-emblem.jpg" alt="K&amp;B Design Group">
+                <img class="header-logo__name" src="images/logo/logo-name-white.png" alt="K&amp;B Design Group">
+            </a>
+
             <nav class="nav">
-                <a href="projects.html">Проекты</a>
-                <a href="about.html">О студии</a>
-                <a href="services.html">Услуги</a>
-                <a href="process.html">Процесс работы</a>
-                <a href="contacts.html">Контакты</a>
+                <a href="index.html" data-i18n="nav.home">Startseite</a>
+                <a href="projects.html" data-i18n="nav.projects">Projekte</a>
+                <a href="about.html" data-i18n="nav.about">Über uns</a>
+                <a href="services.html" data-i18n="nav.services">Leistungen</a>
+                <a href="process.html" data-i18n="nav.process">Ablauf</a>
+                <a href="contacts.html" data-i18n="nav.contacts">Kontakt</a>
             </nav>
-            <div class="header-icons">
-                <a href="#" aria-label="Поиск"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></a>
-                <a href="#" aria-label="Профиль"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></a>
-                <a href="#" aria-label="Избранное"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></a>
-                <a href="#" aria-label="Корзина"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 8h14l-1 12H6L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="cart-badge">2</span></a>
+
+            <div class="header-right">
+                <!-- Переключатель языков: data-lang = код языка из js/i18n.js -->
+                <div class="lang-switch" role="group" aria-label="Sprache wählen" data-i18n-aria="aria.lang">
+                    <button data-lang="de" class="is-active">DE</button>
+                    <button data-lang="en">EN</button>
+                    <button data-lang="uk">UA</button>
+                    <button data-lang="ru">RU</button>
+                </div>
+
+                <div class="header-icons">
+                    <a href="#" aria-label="Suche" data-i18n-aria="aria.search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></a>
+                    <a href="#" aria-label="Profil" data-i18n-aria="aria.profile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></a>
+                    <a href="#" aria-label="Merkliste" data-i18n-aria="aria.favorites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></a>
+                    <a href="#" aria-label="Warenkorb" data-i18n-aria="aria.cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 8h14l-1 12H6L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="cart-badge">2</span></a>
+                </div>
             </div>
         </div>
     </header>
@@ -35,82 +55,86 @@
     <main class="page">
         <div class="page__inner">
 
+            <!-- Шапка страницы -->
             <section class="page-hero" style="background-image: url('images/cat-wardrobes.jpg');">
-                <div class="breadcrumbs"><a href="index.html">Главная</a> / О студии</div>
+                <div class="breadcrumbs"><a href="index.html" data-i18n="nav.home">Startseite</a> / <span data-i18n="nav.about">Über uns</span></div>
                 <br>
-                <h1 class="title">О студии</h1>
-                <p class="lead" style="color:#ddd;">Проектируем, изготавливаем и устанавливаем корпусную мебель по индивидуальным размерам.</p>
+                <h1 class="title" data-i18n="nav.about">Über uns</h1>
+                <p class="lead" style="color:#ddd;" data-i18n="about.heroLead">Wir planen, fertigen und montieren Korpusmöbel nach individuellen Maßen.</p>
             </section>
 
+            <!-- Индивидуальные решения -->
             <section class="section">
                 <div class="container">
-                    <span class="eyebrow">О студии</span>
-                    <h2 class="title">Индивидуальные решения для вашего пространства</h2>
+                    <span class="eyebrow" data-i18n="nav.about">Über uns</span>
+                    <h2 class="title" data-i18n="about.title">Individuelle Lösungen für Ihren Raum</h2>
 
                     <div class="features">
                         <div class="feature">
                             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a2.5 2.5 0 0 1 1.2 4.7l1.4 3.1 2.8-1.2.8 1.8-2.8 1.2 3.3 7.3c.5 1-.1 2.2-1.2 2.4l-.6.1-4.9-10.6-4.9 10.6-.6-.1c-1.1-.2-1.7-1.4-1.2-2.4l3.3-7.3-2.8-1.2.8-1.8 2.8 1.2 1.4-3.1A2.5 2.5 0 0 1 12 2Zm0 1.8a.7.7 0 1 0 0 1.4.7.7 0 0 0 0-1.4Z"/></svg>
-                            <h3>Лазерный замер</h3>
-                            <p>Точный учёт геометрии и особенностей помещения.</p>
+                            <h3 data-i18n="feat1.title">Laser-Aufmaß</h3>
+                            <p data-i18n="feat1.text">Exakte Erfassung der Geometrie und Besonderheiten des Raums.</p>
                         </div>
                         <div class="feature">
                             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 3 6.5v11L12 22l9-4.5v-11L12 2Zm0 2.2 6.4 3.2L12 10.6 5.6 7.4 12 4.2ZM5 9l6 3v7.7l-6-3V9Zm8 10.7V12l6-3v7.7l-6 3Z"/></svg>
-                            <h3>3D&#8209;проектирование</h3>
-                            <p>Полная визуализация и точная смета до начала работ.</p>
+                            <h3 data-i18n="feat2.title">3D&#8209;Planung</h3>
+                            <p data-i18n="feat2.text">Vollständige Visualisierung und genauer Kostenvoranschlag vor Arbeitsbeginn.</p>
                         </div>
                         <div class="feature">
                             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 1.5h2l.4 2a5 5 0 0 1 1.3.6l1.7-1.2 1.4 1.4-1.2 1.7c.3.4.5.8.6 1.3l2 .4v2l-2 .4a5 5 0 0 1-.6 1.3l1.2 1.7-1.4 1.4-1.7-1.2a5 5 0 0 1-1.3.6l-.4 2H9l-.4-2a5 5 0 0 1-1.3-.6l-1.7 1.2-1.4-1.4 1.2-1.7a5 5 0 0 1-.6-1.3l-2-.4v-2l2-.4c.1-.5.3-.9.6-1.3L4.2 4.3l1.4-1.4 1.7 1.2c.4-.3.8-.5 1.3-.6l.4-2ZM10 6.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Zm7.5 7.5h1.5l.3 1.3.9.4 1.1-.8 1 1-.7 1.1.4.9 1.3.3V20l-1.3.3-.4.9.7 1.1-1 1-1.1-.7-.9.4-.3 1.3h-1.5l-.3-1.3-.9-.4-1.1.7-1-1 .7-1.1-.4-.9-1.3-.3v-1.5l1.3-.3.4-.9-.7-1.1 1-1 1.1.8.9-.4.3-1.3Zm.7 3.2a1.6 1.6 0 1 0 0 3.2 1.6 1.6 0 0 0 0-3.2Z"/></svg>
-                            <h3>Собственный цех</h3>
-                            <p>Изготовление на современном автоматизированном оборудовании.</p>
+                            <h3 data-i18n="feat3.title">Eigene Werkstatt</h3>
+                            <p data-i18n="feat3.text">Fertigung auf modernen automatisierten Maschinen.</p>
                         </div>
                     </div>
 
                     <div class="info-bar info-bar--outline">
-                        <span>Отклик на заявку в течение 15 минут</span>
-                        <span>Гарантия соблюдения сроков</span>
+                        <span data-i18n="about.bar1">Reaktion auf Ihre Anfrage innerhalb von 15 Minuten</span>
+                        <span data-i18n="about.bar2">Garantierte Termintreue</span>
                     </div>
                 </div>
             </section>
 
+            <!-- Кто мы -->
             <section class="section section--light" style="border-radius: 32px;">
                 <div class="container about-split">
                     <div>
-                        <span class="eyebrow">Кто мы</span>
-                        <h2 class="title title--sm">Мебель, которая создаётся под вас</h2>
-                        <p class="lead">Мы — студия корпусной мебели в Grafing bei München. Работаем с частными клиентами, дизайнерами интерьера и бизнесом.</p>
-                        <p class="lead">Каждый проект начинается с замера и заканчивается чистым монтажом. Вы общаетесь с одним менеджером на всех этапах — от первого эскиза до приёмки по чек-листу.</p>
-                        <a href="#" class="btn" data-modal-open>Получить консультацию ↗</a>
+                        <span class="eyebrow" data-i18n="about.whoEyebrow">Wer wir sind</span>
+                        <h2 class="title title--sm" data-i18n="about.whoTitle">Möbel, die für Sie entstehen</h2>
+                        <p class="lead" data-i18n="about.whoText1">Wir sind K&amp;B Design Group – ein Studio für Korpusmöbel in Grafing bei München. Wir arbeiten mit Privatkunden, Innenarchitekten und Unternehmen.</p>
+                        <p class="lead" data-i18n="about.whoText2">Jedes Projekt beginnt mit dem Aufmaß und endet mit einer sauberen Montage. Sie haben in allen Phasen einen festen Ansprechpartner – vom ersten Entwurf bis zur Abnahme nach Checkliste.</p>
+                        <a href="#" class="btn" data-modal-open data-i18n="cta.consult">Beratung anfordern ↗</a>
                     </div>
-                    <img src="images/cat-home.jpg" alt="Мебель для дома">
+                    <img class="about-logo" src="images/logo/logo-full.jpg" alt="K&amp;B Design Group — Crafted Vision">
                 </div>
             </section>
 
+            <!-- Гарантии -->
             <section class="section">
                 <div class="container">
-                    <span class="eyebrow">Почему мы</span>
-                    <h2 class="title">Наши ключевые гарантии</h2>
+                    <span class="eyebrow" data-i18n="guar.eyebrow">Warum wir</span>
+                    <h2 class="title" data-i18n="guar.title">Unsere wichtigsten Garantien</h2>
 
                     <div class="guarantees">
                         <div class="guarantee">
                             <div class="guarantee__num">100%</div>
-                            <h3>Прозрачная смета</h3>
-                            <p>Фиксируем стоимость в договоре. Никаких скрытых доплат.</p>
+                            <h3 data-i18n="guar1.title">Transparente Kalkulation</h3>
+                            <p data-i18n="guar1.text">Wir legen den Preis im Vertrag fest. Keine versteckten Zusatzkosten.</p>
                         </div>
                         <div class="guarantee">
-                            <div class="guarantee__num">15 минут</div>
-                            <h3>Быстрая связь</h3>
-                            <p>Оперативный расчёт проекта и обратная связь без задержек.</p>
+                            <div class="guarantee__num" data-i18n="guar2.num">15 Minuten</div>
+                            <h3 data-i18n="guar2.title">Schnelle Rückmeldung</h3>
+                            <p data-i18n="guar2.text">Zügige Projektkalkulation und Rückmeldung ohne Verzögerung.</p>
                         </div>
                         <div class="guarantee">
                             <div class="guarantee__num">100%</div>
-                            <h3>Чистый монтаж</h3>
-                            <p>Убираем строительный мусор после установки вашей мебели.</p>
+                            <h3 data-i18n="guar3.title">Saubere Montage</h3>
+                            <p data-i18n="guar3.text">Wir entfernen den Bauschutt nach der Montage Ihrer Möbel.</p>
                         </div>
                     </div>
 
                     <div class="info-bar">
-                        <span>Готовы реализовать проект любой сложности</span>
-                        <span>Индивидуальный подход</span>
+                        <span data-i18n="guar.bar1">Bereit für Projekte jeder Komplexität</span>
+                        <span data-i18n="guar.bar2">Individueller Ansatz</span>
                     </div>
                 </div>
             </section>
@@ -118,39 +142,52 @@
         </div>
     </main>
 
+    <!-- ================= ПОДВАЛ ================= -->
     <footer class="site-footer">
         <div class="container">
-            <nav class="site-footer__nav">
-                <a href="index.html">Главная</a>
-                <a href="projects.html">Проекты</a>
-                <a href="about.html">О студии</a>
-                <a href="services.html">Услуги</a>
-                <a href="process.html">Процесс работы</a>
-                <a href="contacts.html">Контакты</a>
-            </nav>
+            <div class="site-footer__top">
+                <a href="index.html" class="footer-brand" aria-label="Zur Startseite" data-i18n-aria="aria.homeLogo">
+                    <img class="footer-brand__emblem" src="images/logo/logo-emblem.jpg" alt="">
+                    <span class="footer-brand__text">
+                        <img class="footer-brand__name" src="images/logo/logo-name-white.png" alt="K&amp;B Design Group">
+                        <img class="footer-brand__slogan" src="images/logo/logo-slogan-white.png" alt="Crafted Vision">
+                    </span>
+                </a>
+                <nav class="site-footer__nav">
+                    <a href="index.html" data-i18n="nav.home">Startseite</a>
+                    <a href="projects.html" data-i18n="nav.projects">Projekte</a>
+                    <a href="about.html" data-i18n="nav.about">Über uns</a>
+                    <a href="services.html" data-i18n="nav.services">Leistungen</a>
+                    <a href="process.html" data-i18n="nav.process">Ablauf</a>
+                    <a href="contacts.html" data-i18n="nav.contacts">Kontakt</a>
+                </nav>
+            </div>
             <div class="site-footer__bottom">
-                <span>© <span data-year></span> Студия Корпусной Мебели. Все права защищены.</span>
-                <span>Индивидуальность • Точность • Качество</span>
+                <span>© <span data-year></span> K&amp;B Design Group. <span data-i18n="footer.rights">Alle Rechte vorbehalten.</span></span>
+                <span data-i18n="footer.values">Individualität • Präzision • Qualität</span>
             </div>
         </div>
     </footer>
 
+    <!-- ================= МОДАЛЬНОЕ ОКНО ================= -->
     <div class="modal" id="modal">
         <div class="modal__box">
-            <button class="modal__close" aria-label="Закрыть">&times;</button>
-            <h2>Получить консультацию</h2>
-            <p>Оставьте контакты — перезвоним в течение 15 минут.</p>
+            <button class="modal__close" aria-label="Schließen" data-i18n-aria="aria.close">&times;</button>
+            <h2 data-i18n="modal.title">Beratung anfordern</h2>
+            <p data-i18n="modal.text">Hinterlassen Sie Ihre Kontaktdaten – wir rufen Sie innerhalb von 15 Minuten zurück.</p>
             <form class="form">
-                <input type="text" name="name" placeholder="Ваше имя" required>
-                <input type="tel" name="phone" placeholder="Телефон" required>
-                <textarea name="message" placeholder="Что хотите заказать?"></textarea>
-                <button type="submit" class="btn">Отправить заявку</button>
-                <div class="form__success">Спасибо! Мы скоро свяжемся с вами.</div>
-                <div class="form__agree">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</div>
+                <input type="text" name="name" placeholder="Ihr Name" data-i18n-placeholder="form.name" required>
+                <input type="tel" name="phone" placeholder="Telefon" data-i18n-placeholder="form.phone" required>
+                <textarea name="message" placeholder="Was möchten Sie bestellen?" data-i18n-placeholder="form.message"></textarea>
+                <button type="submit" class="btn" data-i18n="form.submit">Anfrage senden</button>
+                <div class="form__success" data-i18n="form.success">Vielen Dank! Wir melden uns in Kürze bei Ihnen.</div>
+                <div class="form__agree" data-i18n="form.agree">Mit dem Absenden stimmen Sie der Verarbeitung Ihrer personenbezogenen Daten zu.</div>
             </form>
         </div>
     </div>
 
+    <!-- Сначала переводы, потом остальные скрипты -->
+    <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

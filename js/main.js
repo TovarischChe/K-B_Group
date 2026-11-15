@@ -1,10 +1,6 @@
-/* =========================================================
-   Общие скрипты для всех страниц
-   ========================================================= */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    /* ---------- 1. Подсветка активного пункта меню ---------- */
     const currentPage = location.pathname.split('/').pop() || 'index.html';
     document.querySelectorAll('.nav a').forEach(link => {
         if (link.getAttribute('href') === currentPage) {
@@ -12,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    /* ---------- 2. Мобильное меню (бургер) ---------- */
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav');
     if (burger && nav) {
@@ -26,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }));
     }
 
-    /* ---------- 3. Слайдер категорий ---------- */
     document.querySelectorAll('[data-slider]').forEach(wrapper => {
         const track = wrapper.querySelector('.slider');
         const prev = wrapper.querySelector('[data-prev]');
@@ -55,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
         updateBar();
     });
 
-    /* ---------- 4. Этапы работы — раскрытие подробностей ---------- */
     document.querySelectorAll('.step__head').forEach(head => {
         head.addEventListener('click', () => {
             const step = head.closest('.step');
@@ -65,7 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    /* ---------- 5. Фильтр проектов ---------- */
     const filterButtons = document.querySelectorAll('.filter-btn');
     const projects = document.querySelectorAll('.project');
 
@@ -78,13 +70,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     filterButtons.forEach(btn => btn.addEventListener('click', () => applyFilter(btn.dataset.filter)));
 
-    // projects.html#kitchens — сразу открыть нужную категорию
     if (filterButtons.length && location.hash) {
         const fromHash = location.hash.slice(1);
         if ([...filterButtons].some(b => b.dataset.filter === fromHash)) applyFilter(fromHash);
     }
 
-    /* ---------- 6. Модальное окно «Получить консультацию» ---------- */
     const modal = document.getElementById('modal');
 
     const openModal = () => {
@@ -115,11 +105,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* ---------- 7. Формы заявки ----------
-       Сейчас форма просто показывает сообщение «Спасибо».
-       Чтобы заявки реально приходили, подключите обработчик
-       (например, PHP-скрипт, Formspree или Telegram-бот)
-       и укажите его адрес в атрибуте action у <form>. */
     document.querySelectorAll('form.form').forEach(form => {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -128,6 +113,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    /* ---------- 8. Год в подвале ---------- */
     document.querySelectorAll('[data-year]').forEach(el => el.textContent = new Date().getFullYear());
 });

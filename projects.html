@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Проекты | Корпусная мебель на заказ</title>
-    <meta name="description" content="Портфолио: кухни, шкафы и гардеробные, мебель для дома и бизнеса.">
+    <title data-i18n="meta.projects.title">Projekte | K&amp;B Design Group</title>
+    <meta name="description" content="Portfolio: Küchen, Schränke und Ankleiden, Wohn- und Büromöbel." data-i18n-content="meta.projects.desc">
+    <link rel="icon" type="image/png" href="images/logo/favicon.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,21 +14,40 @@
 </head>
 <body>
 
+    <!-- ================= ШАПКА ================= -->
     <header class="site-header">
         <div class="site-header__inner">
-            <button class="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+            <button class="burger" aria-label="Menü" data-i18n-aria="aria.menu"><span></span><span></span><span></span></button>
+
+            <a href="index.html" class="header-logo" aria-label="Zur Startseite" data-i18n-aria="aria.homeLogo">
+                <img class="header-logo__emblem" src="images/logo/logo-emblem.jpg" alt="K&amp;B Design Group">
+                <img class="header-logo__name" src="images/logo/logo-name-white.png" alt="K&amp;B Design Group">
+            </a>
+
             <nav class="nav">
-                <a href="projects.html">Проекты</a>
-                <a href="about.html">О студии</a>
-                <a href="services.html">Услуги</a>
-                <a href="process.html">Процесс работы</a>
-                <a href="contacts.html">Контакты</a>
+                <a href="index.html" data-i18n="nav.home">Startseite</a>
+                <a href="projects.html" data-i18n="nav.projects">Projekte</a>
+                <a href="about.html" data-i18n="nav.about">Über uns</a>
+                <a href="services.html" data-i18n="nav.services">Leistungen</a>
+                <a href="process.html" data-i18n="nav.process">Ablauf</a>
+                <a href="contacts.html" data-i18n="nav.contacts">Kontakt</a>
             </nav>
-            <div class="header-icons">
-                <a href="#" aria-label="Поиск"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></a>
-                <a href="#" aria-label="Профиль"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></a>
-                <a href="#" aria-label="Избранное"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></a>
-                <a href="#" aria-label="Корзина"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 8h14l-1 12H6L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="cart-badge">2</span></a>
+
+            <div class="header-right">
+                <!-- Переключатель языков: data-lang = код языка из js/i18n.js -->
+                <div class="lang-switch" role="group" aria-label="Sprache wählen" data-i18n-aria="aria.lang">
+                    <button data-lang="de" class="is-active">DE</button>
+                    <button data-lang="en">EN</button>
+                    <button data-lang="uk">UA</button>
+                    <button data-lang="ru">RU</button>
+                </div>
+
+                <div class="header-icons">
+                    <a href="#" aria-label="Suche" data-i18n-aria="aria.search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></a>
+                    <a href="#" aria-label="Profil" data-i18n-aria="aria.profile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></a>
+                    <a href="#" aria-label="Merkliste" data-i18n-aria="aria.favorites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></a>
+                    <a href="#" aria-label="Warenkorb" data-i18n-aria="aria.cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 8h14l-1 12H6L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="cart-badge">2</span></a>
+                </div>
             </div>
         </div>
     </header>
@@ -35,71 +55,76 @@
     <main class="page">
         <div class="page__inner">
 
+            <!-- Шапка страницы -->
             <section class="page-hero" style="background-image: url('images/cat-kitchens.jpg');">
-                <div class="breadcrumbs"><a href="index.html">Главная</a> / Проекты</div>
+                <div class="breadcrumbs"><a href="index.html" data-i18n="nav.home">Startseite</a> / <span data-i18n="nav.projects">Projekte</span></div>
                 <br>
-                <h1 class="title">Наши проекты</h1>
-                <p class="lead" style="color:#ddd;">Реализованные работы: кухни, гардеробные, мебель для дома и офиса.</p>
+                <h1 class="title" data-i18n="projects.title">Unsere Projekte</h1>
+                <p class="lead" style="color:#ddd;" data-i18n="projects.heroLead">Realisierte Arbeiten: Küchen, Ankleiden, Wohn- und Büromöbel.</p>
             </section>
 
+            <!-- Галерея проектов -->
             <section class="section">
                 <div class="container">
                     <div class="filters">
-                        <button class="filter-btn is-active" data-filter="all">Все</button>
-                        <button class="filter-btn" data-filter="kitchens">Кухни</button>
-                        <button class="filter-btn" data-filter="wardrobes">Шкафы и гардеробные</button>
-                        <button class="filter-btn" data-filter="home">Мебель для дома</button>
-                        <button class="filter-btn" data-filter="business">Мебель для бизнеса</button>
+                        <button class="filter-btn is-active" data-filter="all" data-i18n="filter.all">Alle</button>
+                        <button class="filter-btn" data-filter="kitchens" data-i18n="cat.kitchens">Küchen</button>
+                        <button class="filter-btn" data-filter="wardrobes" data-i18n="cat.wardrobes">Schränke &amp; Ankleiden</button>
+                        <button class="filter-btn" data-filter="home" data-i18n="cat.home">Wohnmöbel</button>
+                        <button class="filter-btn" data-filter="business" data-i18n="cat.business">Büro- &amp; Geschäftsmöbel</button>
                     </div>
 
+                    <!-- Чтобы добавить проект: скопируйте блок <article class="project">,
+                         положите фото в папку images, укажите категорию в data-category
+                         и добавьте перевод названия в js/i18n.js -->
                     <div class="projects-grid">
                         <article class="project" data-category="kitchens">
-                            <img src="images/kitchen-premium.jpg" alt="Кухня с островом из камня">
+                            <img src="images/kitchen-premium.jpg" alt="Küche mit Steininsel" data-i18n-alt="proj1">
                             <div class="project__caption">
-                                <div class="project__tag">Кухни</div>
-                                <h3>Кухня с каменным островом</h3>
+                                <div class="project__tag" data-i18n="cat.kitchens">Küchen</div>
+                                <h3 data-i18n="proj1">Küche mit Steininsel</h3>
                             </div>
                         </article>
                         <article class="project" data-category="kitchens">
-                            <img src="images/cat-kitchens.jpg" alt="Оливковая кухня">
+                            <img src="images/cat-kitchens.jpg" alt="Olivgrüne Küche mit Marmor" data-i18n-alt="proj2">
                             <div class="project__caption">
-                                <div class="project__tag">Кухни</div>
-                                <h3>Оливковая кухня с мрамором</h3>
+                                <div class="project__tag" data-i18n="cat.kitchens">Küchen</div>
+                                <h3 data-i18n="proj2">Olivgrüne Küche mit Marmor</h3>
                             </div>
                         </article>
                         <article class="project" data-category="wardrobes">
-                            <img src="images/wardrobe-premium.jpg" alt="Гардеробная со стеклянными фасадами">
+                            <img src="images/wardrobe-premium.jpg" alt="Ankleide mit Glasfronten" data-i18n-alt="proj3">
                             <div class="project__caption">
-                                <div class="project__tag">Шкафы и гардеробные</div>
-                                <h3>Гардеробная со стеклом</h3>
+                                <div class="project__tag" data-i18n="cat.wardrobes">Schränke &amp; Ankleiden</div>
+                                <h3 data-i18n="proj3">Ankleide mit Glasfronten</h3>
                             </div>
                         </article>
                         <article class="project" data-category="wardrobes">
-                            <img src="images/cat-wardrobes.jpg" alt="Шкаф с рабочим местом">
+                            <img src="images/cat-wardrobes.jpg" alt="Schrank mit Arbeitsplatz" data-i18n-alt="proj4">
                             <div class="project__caption">
-                                <div class="project__tag">Шкафы и гардеробные</div>
-                                <h3>Шкаф с рабочей зоной</h3>
+                                <div class="project__tag" data-i18n="cat.wardrobes">Schränke &amp; Ankleiden</div>
+                                <h3 data-i18n="proj4">Schrank mit Arbeitsplatz</h3>
                             </div>
                         </article>
                         <article class="project" data-category="home">
-                            <img src="images/cat-home.jpg" alt="ТВ-зона в гостиной">
+                            <img src="images/cat-home.jpg" alt="TV-Wand im Wohnzimmer" data-i18n-alt="proj5">
                             <div class="project__caption">
-                                <div class="project__tag">Мебель для дома</div>
-                                <h3>ТВ-зона в гостиной</h3>
+                                <div class="project__tag" data-i18n="cat.home">Wohnmöbel</div>
+                                <h3 data-i18n="proj5">TV-Wand im Wohnzimmer</h3>
                             </div>
                         </article>
                         <article class="project" data-category="home">
-                            <img src="images/catalog-thumb.jpg" alt="Кухня-гостиная">
+                            <img src="images/catalog-thumb.jpg" alt="Wohnküche" data-i18n-alt="proj6">
                             <div class="project__caption">
-                                <div class="project__tag">Мебель для дома</div>
-                                <h3>Кухня-гостиная</h3>
+                                <div class="project__tag" data-i18n="cat.home">Wohnmöbel</div>
+                                <h3 data-i18n="proj6">Wohnküche</h3>
                             </div>
                         </article>
                         <article class="project" data-category="business">
-                            <img src="images/cat-business.jpg" alt="Кабинет руководителя">
+                            <img src="images/cat-business.jpg" alt="Chefbüro" data-i18n-alt="proj7">
                             <div class="project__caption">
-                                <div class="project__tag">Мебель для бизнеса</div>
-                                <h3>Кабинет руководителя</h3>
+                                <div class="project__tag" data-i18n="cat.business">Büro- &amp; Geschäftsmöbel</div>
+                                <h3 data-i18n="proj7">Chefbüro</h3>
                             </div>
                         </article>
                     </div>
@@ -109,8 +134,8 @@
             <section class="section section--light" style="border-radius: 32px;">
                 <div class="container">
                     <div class="info-bar" style="background:#fff;">
-                        <span>Хотите такой же проект? Рассчитаем стоимость бесплатно</span>
-                        <a href="#" class="btn" data-modal-open>Получить консультацию ↗</a>
+                        <span data-i18n="projects.cta">Sie möchten ein ähnliches Projekt? Wir kalkulieren die Kosten kostenlos</span>
+                        <a href="#" class="btn" data-modal-open data-i18n="cta.consult">Beratung anfordern ↗</a>
                     </div>
                 </div>
             </section>
@@ -118,39 +143,52 @@
         </div>
     </main>
 
+    <!-- ================= ПОДВАЛ ================= -->
     <footer class="site-footer">
         <div class="container">
-            <nav class="site-footer__nav">
-                <a href="index.html">Главная</a>
-                <a href="projects.html">Проекты</a>
-                <a href="about.html">О студии</a>
-                <a href="services.html">Услуги</a>
-                <a href="process.html">Процесс работы</a>
-                <a href="contacts.html">Контакты</a>
-            </nav>
+            <div class="site-footer__top">
+                <a href="index.html" class="footer-brand" aria-label="Zur Startseite" data-i18n-aria="aria.homeLogo">
+                    <img class="footer-brand__emblem" src="images/logo/logo-emblem.jpg" alt="">
+                    <span class="footer-brand__text">
+                        <img class="footer-brand__name" src="images/logo/logo-name-white.png" alt="K&amp;B Design Group">
+                        <img class="footer-brand__slogan" src="images/logo/logo-slogan-white.png" alt="Crafted Vision">
+                    </span>
+                </a>
+                <nav class="site-footer__nav">
+                    <a href="index.html" data-i18n="nav.home">Startseite</a>
+                    <a href="projects.html" data-i18n="nav.projects">Projekte</a>
+                    <a href="about.html" data-i18n="nav.about">Über uns</a>
+                    <a href="services.html" data-i18n="nav.services">Leistungen</a>
+                    <a href="process.html" data-i18n="nav.process">Ablauf</a>
+                    <a href="contacts.html" data-i18n="nav.contacts">Kontakt</a>
+                </nav>
+            </div>
             <div class="site-footer__bottom">
-                <span>© <span data-year></span> Студия Корпусной Мебели. Все права защищены.</span>
-                <span>Индивидуальность • Точность • Качество</span>
+                <span>© <span data-year></span> K&amp;B Design Group. <span data-i18n="footer.rights">Alle Rechte vorbehalten.</span></span>
+                <span data-i18n="footer.values">Individualität • Präzision • Qualität</span>
             </div>
         </div>
     </footer>
 
+    <!-- ================= МОДАЛЬНОЕ ОКНО ================= -->
     <div class="modal" id="modal">
         <div class="modal__box">
-            <button class="modal__close" aria-label="Закрыть">&times;</button>
-            <h2>Получить консультацию</h2>
-            <p>Оставьте контакты — перезвоним в течение 15 минут.</p>
+            <button class="modal__close" aria-label="Schließen" data-i18n-aria="aria.close">&times;</button>
+            <h2 data-i18n="modal.title">Beratung anfordern</h2>
+            <p data-i18n="modal.text">Hinterlassen Sie Ihre Kontaktdaten – wir rufen Sie innerhalb von 15 Minuten zurück.</p>
             <form class="form">
-                <input type="text" name="name" placeholder="Ваше имя" required>
-                <input type="tel" name="phone" placeholder="Телефон" required>
-                <textarea name="message" placeholder="Что хотите заказать?"></textarea>
-                <button type="submit" class="btn">Отправить заявку</button>
-                <div class="form__success">Спасибо! Мы скоро свяжемся с вами.</div>
-                <div class="form__agree">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</div>
+                <input type="text" name="name" placeholder="Ihr Name" data-i18n-placeholder="form.name" required>
+                <input type="tel" name="phone" placeholder="Telefon" data-i18n-placeholder="form.phone" required>
+                <textarea name="message" placeholder="Was möchten Sie bestellen?" data-i18n-placeholder="form.message"></textarea>
+                <button type="submit" class="btn" data-i18n="form.submit">Anfrage senden</button>
+                <div class="form__success" data-i18n="form.success">Vielen Dank! Wir melden uns in Kürze bei Ihnen.</div>
+                <div class="form__agree" data-i18n="form.agree">Mit dem Absenden stimmen Sie der Verarbeitung Ihrer personenbezogenen Daten zu.</div>
             </form>
         </div>
     </div>
 
+    <!-- Сначала переводы, потом остальные скрипты -->
+    <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
